@@ -1,0 +1,49 @@
+.copy-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #21aa93;
+    border: none;
+    color: white;
+    padding: 5px 15px; /* 调整内边距使按钮更平衡 */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* 稍微增大字体 */
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px; /* 增加边框半径使其更圆润 */
+    font-family: 'Arial', sans-serif; /* 保持字体 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+}
+
+.copy-button:hover {
+    background-color: #1e9983; /* 鼠标悬停时颜色变暗 */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* 鼠标悬停时增加阴影 */
+}
+
+.copy-button:active {
+    background-color: #198f78; /* 点击时颜色变得更暗 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 点击时阴影变小 */
+}
+
+.message-content {
+    position: relative;
+    background-color: #F0F0F0; /* 灰色背景 */
+    padding: 20px; /* 添加内边距以使背景效果更好 */
+    border-radius: 10px; /* 增加边框半径 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 为消息内容部分也添加轻微阴影 */
+}
+
+.message-content pre {
+    position: relative;
+    padding-top: 30px; /* 确保按钮有足够的空间 */
+    margin: 0; /* 消除默认的边距 */
+    background: none; /* 确保背景颜色不覆盖父元素 */
+    font-family: 'Courier New', monospace; /* `更改代码字体 */
+}
+
+.message-content pre code {
+    display: block;
+}

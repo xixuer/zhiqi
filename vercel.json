@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/url/word/:path*", "destination": "http://114.55.113.210:5000/:path*" },
+    { "source": "/url/tran/:path*", "destination": "http://114.55.113.210:9090/:path*" },
+    { "source": "/url/java/:path*", "destination": "http://114.55.113.210:80/:path*" },
+    { "source": "/url/summary/:path*", "destination": "http://114.55.113.210:8000/:path*" }
+  ]
+}

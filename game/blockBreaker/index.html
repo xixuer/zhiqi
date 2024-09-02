@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+<div class="wrapper">
+    <div id="page" class="site">
+        <div class="options1">
+            <!-- 添加跳转到登录页面的按钮 -->
+            <div class="login-button">
+                <a href="signin.html"><i class="btn">Login</i></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero">
+                <h1>欢迎来到 智启</h1>
+                <p>登录以体验智能对话，探索更多功能</p>
+            </div>
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <p>智启！启动！！！</p>
+                </div>
+            </div>
+            
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <p>敬请期待！！！</p>
+                </div>
+            </div>
+            
+            <div id="popup" class="popup">
+                <div class="popup-content3">
+                    <span class="close">&times;</span>
+                    <p>找不到我吧</p>
+                </div>
+            </div>
+            <div class="main">
+                <div class="options">
+                    <div class="separator">
+                        <p>Welcome to ZhiQi</p>
+                    </div>
+                    <ul>
+                        <li><a href="/game/floppybird-gh-pages/index.html"><i class="ri-fill ri-2x"></i></a></li>
+                        <li><a href="/game/kaboom-master/index.html"><i class="ri-fill ri-2x"></i></a></li>
+                        <li><a href="/game/2048-master/index.html"><i ></i></a></li>
+                        <li><a href="/game/t-rex-runner-gh-pages/index.html"><i class="ri-fill ri-2x"></i></a></li>
+                        <li><a href="/game/blockBreaker/index.html"><i class="ri-fill ri-2x"></i></a></li>
+                        <li><a href="/game/pacman-master/index.html"><i class="ri-fill ri-2x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <footer class="site-footer">
+            <div class="container">
+                <p>&copy; 2024 - 智启</p>
+            </div>
+        </footer>
+    </div>
+
+</div>
+</body>
+</html>
+
+<style>
+:root {
+    --primary-color: #f3ad22;
+    --white-color: #ffffff;
+    --light-text-color: #9398b3;
+    --light-bg-color: #f2f4ff;
+    --dark-color: #333333;
+    --background-color: #fcfcff;
+}
+
+.site-footer p {
+    min-height: 5vh;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, ::before::after {
+    box-sizing: border-box;
+}
+.wrapper {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--dark-color);
+    background-color: var(--background-color);
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.options1 {
+    height: 80px;
+}
+
+.login-button {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #16a616;
+    color: var(--white-color);
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--dark-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    line-height: normal;
+    color: black;
+}
+
+.site {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero {
+    flex:1 0 66.6666%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 70px 0;
+    align-items: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+  
+    width: 80vw; /* 使用视口宽度来代替固定宽度 */
+    height: 20vh; /* 使用视口高度来代替固定高度 */
+    background: linear-gradient(to right, var(--primary-color), #c471ed, #f64f59);
+    z-index: -1;
+    filter: blur(70px);
+}
+
+.hero a {
+    font-weight: 500;
+    color: var(--primary-color);
+    transition: color .3s;
+}
+
+.hero a:hover,
+form .password a:hover {
+    color: var(--dark-color);
+    text-decoration: underline;
+}
+
+.main {
+    flex: 1 0 33.3333%;
+}
+
+.separator {
+    position: relative;
+    margin: 50px 0 30px;
+}
+
+.separator::before {
+    content: '';
+    top: 40%;
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-text-color);
+    opacity: .3;
+    z-index: 1;
+}
+
+.separator p {
+    font-size: 14px;
+    width: fit-content;
+    padding: 0 10px;
+    color: var(--light-text-color);
+    background-color: var(--background-color);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.options ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.options ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: var(--white-color);
+    box-shadow: var(--light-text-color) 0 10px 20px -10px;
+    transition: all .3s ease-out;
+}
+
+.options ul li a:hover {
+    color: var(--white-color);
+    box-shadow: none;
+}
+
+.options ul li:nth-child(1) a:hover {
+    background-color: #171a21;
+}
+
+.options ul li:nth-child(2) a:hover {
+    background-color: #00439c;
+}
+
+.options ul li:nth-child(3) a:hover {
+    background-color: #107c10;
+}
+
+.options ul li:nth-child(4) a:hover {
+    background-color: #f4f2f1;
+}
+
+.options ul li:nth-child(5) a:hover {
+    background-color: #f36913;
+}
+
+.options ul li:nth-child(6) a:hover {
+    background-color: #13c2ee;
+}
+
+/* 媒体查询 - 针对较小屏幕的调整 */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
+    .login-button {
+        top: 5px;
+        right: 10px;
+    }
+
+    .options ul {
+        gap: 10px; /* 减小间距 */
+    }
+
+    .options ul li a {
+        width: 50px;
+        height: 50px; /* 调整图标尺寸 */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+
+    .options ul {
+        gap: 8px; /* 进一步减少间距 */
+    }
+
+    .options ul li a {
+        width: 45px;
+        height: 45px; /* 再次调整图标尺寸 */
+    }
+}
+
+/* 弹框的样式 */
+.popup {
+    display: none; /* 初始状态隐藏 */
+    position: fixed;
+    z-index: 100; /* 确保弹框显示在最上层 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    justify-content: center;
+    align-items: center;
+}
+
+/* 弹框内容的样式 */
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+/* 关闭按钮的样式 */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+<script>
+        // 获取元素
+    const popup = document.getElementById("popup");
+    const closeBtn = document.querySelector(".close");
+    const trigger = document.querySelector("li a");
+
+
+    // 当点击关闭按钮时，隐藏弹框
+    closeBtn.addEventListener("click", function() {
+        popup.style.display = "none";
+    });
+
+    // 当用户点击弹框外部时，隐藏弹框
+    window.addEventListener("click", function(event) {
+        if (event.target == popup) {
+            popup.style.display = "none";
+        }
+    });
+
+</script>

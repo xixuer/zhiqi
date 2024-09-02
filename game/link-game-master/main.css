@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  padding-top: 10vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #000;
+  -khtml-user-select: none;
+}
+
+.wrapper {
+  position: relative;
+  width: 90vw;
+  height: 70vh;
+  margin: 0 auto;
+  background: url('images/game-bg.png') center no-repeat;
+  background-size: cover;
+}
+
+.wrapper .init-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url('images/start-cover.png') center no-repeat;
+  background-size: cover;
+}
+
+.wrapper .init-box .start-btn {
+  position: absolute;
+  right: 0;
+  bottom: 3vh;
+  left: 0;
+  width: 15vw;
+  height: 20vh;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.wrapper .game-box {
+  position: relative;
+  width: 100%;
+}
+
+.wrapper .game-box .toolbar {
+  font-size: 2.5vh;
+  line-height: 9vh;
+  position: relative;
+  width: 100%;
+  height: 9vh;
+  background: url('images/toolbar3.png') center no-repeat;
+  background-size: cover;
+}
+
+.wrapper .game-box .toolbar .time {
+  line-height: 3.5vh;
+  position: absolute;
+  top: 1.5vh;
+  left: 10vw;
+}
+
+.wrapper .game-box .toolbar .level {
+  line-height: 3.5vh;
+  position: absolute;
+  top: 1.2vh;
+  left: 25vw;
+  height: 3.5vh;
+}
+
+.wrapper .game-box .toolbar .level img {
+  height: 3.5vh;
+}
+
+.wrapper .game-box .toolbar .disorder {
+  position: absolute;
+  left: 30vw;
+  width: 12vw;
+  height: 8vh;
+  cursor: pointer;
+}
+
+.wrapper .game-box .toolbar .disorder img {
+  position: absolute;
+  top: 4vh;
+  right: 0;
+}
+
+.wrapper .game-box .toolbar .scoring {
+  line-height: 3.5vh;
+  position: absolute;
+  top: 1.5vh;
+  left: 50vw;
+  width: 25vw;
+  height: 3.5vh;
+  cursor: pointer;
+}
+
+.wrapper .game-box .toolbar .scoring img {
+  height: 3.5vh;
+}
+
+.wrapper .game-box .game-area {
+  position: relative;
+}
+
+.wrapper .game-box .game-area table#game {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.wrapper .game-box .game-area table#game .game-row {
+  height: 8vh;
+}
+
+.wrapper .game-box .game-area table#game .game-row td {
+  width: 8vw;
+  height: 8vh;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.wrapper .game-box .game-area table#game .game-row td .pic-box {
+  line-height: 6.4vh;
+  display: inline-block;
+  width: 6.4vw;
+  height: 6.4vh;
+  cursor: pointer;
+  background: url('images/pic-bg.png') center no-repeat;
+  background-size: contain;
+}
+
+.wrapper .game-box .game-area table#game .game-row td .pic-box.active {
+  width: 8vw;
+  height: 8vh;
+  border-radius: 1.6vh;
+  background: url(images/active.png) center no-repeat;
+  background-size: 124%;
+}
+
+.wrapper .game-box .game-area table#game .game-row td .pic-box img {
+  vertical-align: middle;
+}
+
+.wrapper .game-box .game-area #canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90vw;
+  height: 60vh;
+}
+
+.wrapper .game-over {
+  position: absolute;
+  top: 0;
+  width: 90vw;
+  height: 70vh;
+  background: rgba(0, 0, 0, .4) url(images/game-over.png) center no-repeat;
+  background-size: auto;
+}
+
+.wrapper .game-over .current-score {
+  position: absolute;
+  top: 35vh;
+  left: 25vw;
+  width: 35vw;
+  height: 6vh;
+  text-align: center;
+}
+
+.wrapper .game-over .history-score {
+  font-size: 2vh;
+  position: absolute;
+  top: 45vh;
+  left: 40vw;
+  width: 20vw;
+  height: 3vh;
+  color: #999;
+}
+
+.wrapper .game-over .replay-btn {
+  position: absolute;
+  top: 42vh;
+  left: 30vw;
+  width: 20vw;
+  height: 3vh;
+  cursor: pointer;
+}
+
+.empty {
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.number {
+  display: inline-block;
+  width: 3.5vh;
+  height: 3.5vh;
+  background-size: contain;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: 95vw;
+    height: 80vh;
+  }
+
+  .wrapper .init-box .start-btn {
+    width: 20vw;
+    height: 25vh;
+  }
+
+  .wrapper .game-box .toolbar {
+    font-size: 3vh;
+    height: 10vh;
+  }
+
+  .wrapper .game-box .toolbar .time {
+    top: 2vh;
+    left: 5vw;
+  }
+
+  .wrapper .game-box .toolbar .level {
+    top: 1.5vh;
+    left: 20vw;
+  }
+
+  .wrapper .game-box .toolbar .disorder {
+    left: 25vw;
+    width: 15vw;
+  }
+
+  .wrapper .game-box .toolbar .scoring {
+    left: 45vw;
+    width: 30vw;
+  }
+
+  .wrapper .game-box .game-area table#game .game-row {
+    height: 10vh;
+  }
+
+  .wrapper .game-box .game-area table#game .game-row td {
+    width: 10vw;
+    height: 10vh;
+  }
+
+  .wrapper .game-box .game-area table#game .game-row td .pic-box {
+    width: 8vw;
+    height: 8vh;
+  }
+
+  .wrapper .game-box .game-area table#game .game-row td .pic-box.active {
+    width: 10vw;
+    height: 10vh;
+  }
+
+  .wrapper .game-box .game-area #canvas {
+    width: 95vw;
+    height: 65vh;
+  }
+
+  .wrapper .game-over {
+    width: 95vw;
+    height: 80vh;
+  }
+
+  .wrapper .game-over .current-score {
+    top: 40vh;
+    left: 20vw;
+    width: 40vw;
+  }
+
+  .wrapper .game-over .history-score {
+    top: 50vh;
+    left: 35vw;
+  }
+
+  .wrapper .game-over .replay-btn {
+    top: 47vh;
+    left: 25vw;
+  }
+}
